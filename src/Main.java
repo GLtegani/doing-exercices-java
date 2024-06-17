@@ -1,5 +1,6 @@
 import entities.Person;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -62,44 +63,146 @@ public class Main {
 
 //      EX 3
 
-      System.out.print("How many people will be entered? ");
-      int n = sc.nextInt();
-      Person person = new Person(n);
-      String[] name = new String[n];
-      int[] age = new int[n];
-      double[] height = new double[n];
-      for(int i = 0; i < n; i++) {
-         if(i >= 0) {
-            sc.nextLine();
-            System.out.printf("Dados da %da pessoa: %n", i + 1);
-            System.out.print("Name: ");
-            name[i] = sc.nextLine();
-            person.setName(name);
+//      System.out.print("How many people will be entered? ");
+//      int n = sc.nextInt();
+//      Person person = new Person(n);
+//      String[] name = new String[n];
+//      int[] age = new int[n];
+//      double[] height = new double[n];
+//      for(int i = 0; i < n; i++) {
+//         if(i >= 0) {
+//            sc.nextLine();
+//            System.out.printf("Dados da %da pessoa: %n", i + 1);
+//            System.out.print("Name: ");
+//            name[i] = sc.nextLine();
+//            person.setName(name);
+//
+//            System.out.print("Age: ");
+//            age[i] = sc.nextInt();
+//            person.setAge(age);
+//
+//            sc.nextLine();
+//
+//            System.out.print("Height: ");
+//            height[i] = sc.nextDouble();
+//            person.setHeight(height);
+//         }
+//      }
+//
+//      System.out.printf(person + "%n");
+//
+//      System.out.print("Average height: ");
+//      System.out.printf("%.2f %n", person.averageHeight());
+//
+//      System.out.print("Pessoas com menos de 16 anos: ");
+//      System.out.print(person.percentualUnder16() + "%");
+//      System.out.println();
+//
+//      for(int i = 0; i < n; i++) {
+//         if(person.getAge()[i] < 16) {
+//            System.out.printf(person.getName()[i] + "%n");
+//         }
+//      }
 
-            System.out.print("Age: ");
-            age[i] = sc.nextInt();
-            person.setAge(age);
+//      EX 4
 
-            sc.nextLine();
+//      System.out.print("Quantos numeros voce vai digitar? ");
+//      int[] numbersToType = new int[sc.nextInt()];
+//      ArrayList<Integer> pairsNumbers = new ArrayList<>();
+//
+//      sc.nextLine();
+//
+//      for(int i = 0; i < numbersToType.length; i++) {
+//         System.out.print("Digite um numero: ");
+//         numbersToType[i] = sc.nextInt();
+//
+//         if(numbersToType[i] % 2 == 0) {
+//            pairsNumbers.add(numbersToType[i]);
+//         }
+//
+//      }
+//
+//      System.out.printf("NUMEROS PARES: %n");
+//
+//      for(int number : pairsNumbers) {
+//         System.out.printf("%d  ", number);
+//      }
+//
+//      System.out.printf("%nQUANTITADE DE PARES = %d", pairsNumbers.size());
 
-            System.out.print("Height: ");
-            height[i] = sc.nextDouble();
-            person.setHeight(height);
-         }
-      }
+//      EX 5
 
-      System.out.printf(person + "%n");
+//      System.out.print("Quantos numeros voce vai digitar? ");
+//      double[] numbers = new double[sc.nextInt()];
+//      double higherNumber = 0;
+//      int index = 0;
+//
+//      sc.nextLine();
+//
+//      for(int i = 0; i < numbers.length; i++) {
+//         System.out.print("Digite um numero: ");
+//         numbers[i] = sc.nextDouble();
+//      }
+//
+//      for(int i = 0; i < numbers.length; i++) {
+//         if(numbers[i] > higherNumber) {
+//            higherNumber = numbers[i];
+//            index = i;
+//         }
+//      }
+//
+//      System.out.printf("MAIOR VALOR = %.1f%n", higherNumber);
+//      System.out.printf("POSICAO DO MAIOR VALOR = %d", index);
 
-      System.out.print("Average height: ");
-      System.out.printf("%.2f %n", person.averageHeight());
+//      EX 6
 
-      System.out.print("Pessoas com menos de 16 anos: ");
-      System.out.print(person.percentualUnder16() + "%");
-      System.out.println();
+//      System.out.print("Quantos valores vai ter cada array? ");
+//      int n = sc.nextInt();
+//
+//      int[] arrayA = new int[n];
+//      int[] arrayB = new int[n];
+//
+//      sc.nextLine();
+//
+//      System.out.printf("Digite os valores do array A:%n");
+//
+//      for(int i = 0; i < arrayA.length; i++) {
+//         System.out.printf("%do Numero: ", i);
+//         arrayA[i] = sc.nextInt();
+//      }
+//
+//      sc.nextLine();
+//      System.out.printf("Digite os valores do array B:%n");
+//
+//      for(int i = 0; i < arrayB.length; i++) {
+//         System.out.printf("%do Numero: ", i);
+//         arrayB[i] = sc.nextInt();
+//      }
+//
+//      int[] arrayC = new int[n];
+//
+//      for(int i = 0; i < arrayC.length; i++) {
+//         arrayC[i] = arrayA[i] + arrayB[i];
+//      }
+//
+//      System.out.printf("VETOR RESULTANTE:%n");
+//
+//      for(int i = 0; i < arrayC.length; i++) {
+//         System.out.printf("%d%n", arrayC[i]);
+//      }
 
-      for(int i = 0; i < n; i++) {
-         if(person.getAge()[i] < 16) {
-            System.out.printf(person.getName()[i] + "%n");
+//      EX 7
+
+      System.out.print("Quantos elementos vai ter o array? ");
+      int[] numbersArray = new int[sc.nextInt()];
+      ArrayList<Integer> pairNumbers = new ArrayList<>();
+
+      for(int i = 0; i < numbersArray.length; i++) {
+         System.out.print("Digite um numero: ");
+         numbersArray[i] = sc.nextInt();
+
+         if(numbersArray[i] % 2 == 0) {
+            pairNumbers.add(numbersArray[i]);
          }
       }
 
