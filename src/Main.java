@@ -1,3 +1,4 @@
+import entities.Approved;
 import entities.OlderPerson;
 import entities.Person;
 
@@ -220,32 +221,62 @@ public class Main {
 
 //      EX 8
 
-      OlderPerson person = new OlderPerson();
-      System.out.print("Quantas pessoas voce vai digitar? ");
-      person.setQuantity(sc.nextInt());
+//      OlderPerson person = new OlderPerson();
+//      System.out.print("Quantas pessoas voce vai digitar? ");
+//      person.setQuantity(sc.nextInt());
+//
+//      sc.nextLine();
+//      for(int i = 0; i < person.getQuantity(); i++) {
+//         System.out.printf("Dados da %da pessoa:%n", i + 1);
+//         System.out.print("Nome: ");
+//         person.setName(sc.nextLine());
+//         System.out.print("Idade: ");
+//         person.setAge(sc.nextInt());
+//         person.setPeopleName();
+//         person.setPeopleAge();
+//         sc.nextLine();
+//      }
+//
+//      for(int i = 0; i < person.getQuantity(); i++) {
+//         if(person.getPeopleAge().get(i) > person.getOlderAge()) {
+//            person.setOlderAge(person.getPeopleAge().get(i));
+//            person.setIndexOlderAge(i);
+//         }
+//      }
+//
+//      person.setOlderName(person.getPeopleName().get(person.getIndexOlderAge()));
+//
+//      System.out.printf("PESSOA MAIS VELHA: %s", person.getOlderName());
 
-      sc.nextLine();
-      for(int i = 0; i < person.getQuantity(); i++) {
-         System.out.printf("Dados da %da pessoa:%n", i + 1);
-         System.out.print("Nome: ");
-         person.setName(sc.nextLine());
-         System.out.print("Idade: ");
-         person.setAge(sc.nextInt());
-         person.setPeopleName();
-         person.setPeopleAge();
-         sc.nextLine();
-      }
+//      EX 9
 
-      for(int i = 0; i < person.getQuantity(); i++) {
-         if(person.getPeopleAge().get(i) > person.getOlderAge()) {
-            person.setOlderAge(person.getPeopleAge().get(i));
-            person.setIndexOlderAge(i);
-         }
-      }
-
-      person.setOlderName(person.getPeopleName().get(person.getIndexOlderAge()));
-
-      System.out.printf("PESSOA MAIS VELHA: %s", person.getOlderName());
+//      Approved student = new Approved();
+//      System.out.print("Quantos alunos serao digitados? ");
+//      student.setQuantity(sc.nextInt());
+//
+//      sc.nextLine();
+//
+//      for(int i = 0; i < student.getQuantity(); i++) {
+//         System.out.printf("Digite nome, primeira e segunda nota do %do aluno: %n", i + 1);
+//         System.out.print("Nome: ");
+//         student.setStudentName(sc.next());
+//         System.out.printf("Primeira nota: ");
+//         student.setGradeOne(sc.nextDouble());
+//         System.out.print("Segunda nota: ");
+//         student.setGradeTwo(sc.nextDouble());
+//
+//         student.setStudentsNames();
+//         student.setGrades();
+//      }
+//
+//      student.setApprovedStudents();
+//
+//      System.out.printf("Alunos aprovados: %n");
+//      for(int i = 0; i < student.getApprovedStudents().size(); i++) {
+//         System.out.printf("%s %n", student.getApprovedStudents().get(i));
+//      }
+//
+//      System.out.print(student);
 
       sc.close();
    }
