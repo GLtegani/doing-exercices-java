@@ -1,3 +1,4 @@
+import entities.OlderPerson;
 import entities.Person;
 
 import java.util.ArrayList;
@@ -193,18 +194,58 @@ public class Main {
 
 //      EX 7
 
-      System.out.print("Quantos elementos vai ter o array? ");
-      int[] numbersArray = new int[sc.nextInt()];
-      ArrayList<Integer> pairNumbers = new ArrayList<>();
+//      System.out.print("Quantos elementos vai ter o array? ");
+//      int[] numbersArray = new int[sc.nextInt()];
+//      ArrayList<Integer> pairNumbers = new ArrayList<>();
+//      double pairMedia = 0.0;
+//
+//      for(int i = 0; i < numbersArray.length; i++) {
+//         System.out.print("Digite um numero: ");
+//         numbersArray[i] = sc.nextInt();
+//         if(numbersArray[i] % 2 == 0) {
+//            pairNumbers.add(numbersArray[i]);
+//         }
+//      }
+//
+//      for(int i = 0; i < pairNumbers.size(); i++) {
+//         pairMedia = pairMedia + pairNumbers.get(i);
+//      }
+//
+//      pairMedia /= pairNumbers.size();
+//      if(pairNumbers.size() == 0) {
+//         System.out.print("NENHUM NUMERO PAR");
+//      } else {
+//         System.out.printf("MEDIA DOS PARES = %.1f", pairMedia);
+//      }
 
-      for(int i = 0; i < numbersArray.length; i++) {
-         System.out.print("Digite um numero: ");
-         numbersArray[i] = sc.nextInt();
+//      EX 8
 
-         if(numbersArray[i] % 2 == 0) {
-            pairNumbers.add(numbersArray[i]);
+      OlderPerson person = new OlderPerson();
+      System.out.print("Quantas pessoas voce vai digitar? ");
+      person.setQuantity(sc.nextInt());
+
+      sc.nextLine();
+      for(int i = 0; i < person.getQuantity(); i++) {
+         System.out.printf("Dados da %da pessoa:%n", i + 1);
+         System.out.print("Nome: ");
+         person.setName(sc.nextLine());
+         System.out.print("Idade: ");
+         person.setAge(sc.nextInt());
+         person.setPeopleName();
+         person.setPeopleAge();
+         sc.nextLine();
+      }
+
+      for(int i = 0; i < person.getQuantity(); i++) {
+         if(person.getPeopleAge().get(i) > person.getOlderAge()) {
+            person.setOlderAge(person.getPeopleAge().get(i));
+            person.setIndexOlderAge(i);
          }
       }
+
+      person.setOlderName(person.getPeopleName().get(person.getIndexOlderAge()));
+
+      System.out.printf("PESSOA MAIS VELHA: %s", person.getOlderName());
 
       sc.close();
    }
